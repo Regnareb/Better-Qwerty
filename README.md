@@ -1,5 +1,6 @@
 # Better-Qwerty
-A Qwerty with accentuated letters as dead keys. 
+A Qwerty with accentuated letters as dead keys. <br />
+Open the .klc file with Microsoft Keyboard Layout Creator or just download the install package in the releases.
 
 ![Keyboard Layout](keyboard_layout.png)
 
