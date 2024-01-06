@@ -1,1 +1,250 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <style>
+    *, *::before, *::after {
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: "Work Sans", sans-serif;
+        font-weight: 400;
+        height: 100vh;
+      }
+
+      button {
+        margin:0 auto;
+        width:49%;
+        height: 5em;
+        border-radius:10px;
+        border:none
+      }
+      
+      p {     
+        padding: 20px;  
+        border-radius:10px;
+        background: #ddd;
+
+}
+
+      .wrapper {
+        background: linear-gradient(60deg, #420285, #08BDBD);
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      
+      .carousel {
+        position: relative;
+        width: 100%;
+        max-width: 600px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+      
+      .carousel__item {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 30%;
+        width: 90%;
+        margin: 0;
+        margin-left:-2%;
+        opacity: 0;
+        filter: drop-shadow(0 2px 2px #555);
+        background-color: #fff;
+        border-radius: 4px;
+        padding: 16px 20px 16px 20px;
+        justify-content: center;
+
+        text-transform: uppercase;
+        font-size: 20px;
+        xfont-weight: bold;
+
+
+
+        will-change: transform, opacity;
+        -webkit-animation: carousel-animate-vertical 27s linear infinite;
+                animation: carousel-animate-vertical 27s linear infinite;
+      }
+      
+      .carousel__item:nth-child(1) {
+        -webkit-animation-delay: calc(3s * -1);
+                animation-delay: calc(3s * -1);
+      }
+      
+      .carousel__item:nth-child(2) {
+        -webkit-animation-delay: calc(3s * 0);
+                animation-delay: calc(3s * 0);
+      }
+      
+      .carousel__item:nth-child(3) {
+        -webkit-animation-delay: calc(3s * 1);
+                animation-delay: calc(3s * 1);
+      }
+      
+      .carousel__item:nth-child(4) {
+        -webkit-animation-delay: calc(3s * 2);
+                animation-delay: calc(3s * 2);
+      }
+      
+      .carousel__item:nth-child(5) {
+        -webkit-animation-delay: calc(3s * 3);
+                animation-delay: calc(3s * 3);
+      }
+      
+      .carousel__item:nth-child(6) {
+        -webkit-animation-delay: calc(3s * 4);
+                animation-delay: calc(3s * 4);
+      }
+      
+      .carousel__item:nth-child(7) {
+        -webkit-animation-delay: calc(3s * 5);
+                animation-delay: calc(3s * 5);
+      }
+      
+      .carousel__item:nth-child(8) {
+        -webkit-animation-delay: calc(3s * 6);
+                animation-delay: calc(3s * 6);
+      }
+      
+      .carousel__item:nth-child(9) {
+        -webkit-animation-delay: calc(3s * 7);
+                animation-delay: calc(3s * 7);
+      }
+      
+      .carousel__item:nth-child(10) {
+        -webkit-animation-delay: calc(3s * 8);
+                animation-delay: calc(3s * 8);
+      }
+      
+      .carousel__item:nth-child(11) {
+        -webkit-animation-delay: calc(3s * 9);
+                animation-delay: calc(3s * 9);
+      }
+      
+      .carousel__item:nth-child(12) {
+        -webkit-animation-delay: calc(3s * 10);
+                animation-delay: calc(3s * 10);
+      }
+      
+      .carousel__item:last-child {
+        -webkit-animation-delay: calc(-3s * 2);
+                animation-delay: calc(-3s * 2);
+      }
+      
+            
+      @-webkit-keyframes carousel-animate-vertical {
+        0% {
+          transform: translateY(100%) scale(0.5);
+          opacity: 0;
+          visibility: hidden;
+        }
+        3%, 11.1111111111% {
+          transform: translateY(100%) scale(0.7);
+          opacity: 0.4;
+          visibility: visible;
+        }
+        14.1111111111%, 22.2222222222% {
+          transform: translateY(0) scale(1);
+          opacity: 1;
+          visibility: visible;
+        }
+        25.2222222222%, 33.3333333333% {
+          transform: translateY(-100%) scale(0.7);
+          opacity: 0.4;
+          visibility: visible;
+        }
+        36.3333333333% {
+          transform: translateY(-200%) scale(0.5);
+          opacity: 0;
+          visibility: visible;
+        }
+        100% {
+          transform: translateY(-300%) scale(0.5);
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+      
+      @keyframes carousel-animate-vertical {
+        0% {
+          transform: translateY(50%) scale(1);
+          opacity: 0;
+          visibility: hidden;
+        }
+        3%, 11.1111111111% {
+          transform: translateY(100%) scale(1);
+          opacity: 0;
+          visibility: visible;
+        }
+        14.1111111111%, 22.2222222222% {
+          transform: translateY(0) scale(1);
+          opacity: 1;
+          visibility: visible;
+        }
+        25.2222222222%, 33.3333333333% {
+          transform: translateY(-100%) scale(0.7);
+          opacity: 0.4;
+          visibility: visible;
+        }
+        36.3333333333%, 44.444444444% {
+          transform: translateY(-170%) scale(0.5);
+          opacity: 0.2;
+          visibility: visible;
+        }
+        47%, 55% {
+          transform: translateY(-200%) scale(0.4);
+          opacity: 0;
+          visibility: visible;
+        }
+        58% {
+          transform: translateY(-300%) scale(0.4);
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+      </style>
+</head>
+<body>
+    <div class='wrapper'>
+        <div class='carousel'>
+          <ul>
+            <li class='carousel__item'>` + e = &egrave;</li>
+            <li class='carousel__item'>' + e = &eacute;</li>
+            <li class='carousel__item'>` + a = &agrave;</li>
+            <li class='carousel__item'>' + o = &oacute;</li>
+            <li class='carousel__item'>^ + a = &acirc;</li>
+            <li class='carousel__item'>~ + n = &ntilde;</li>
+            <li class='carousel__item'>: + a = &auml;</li>
+            <li class='carousel__item'>, + c = &ccedil;</li>
+            <li class='carousel__item'>` + u = &ugrave;</li>
+            <li class='carousel__item'>/ + o = ø</li>
+            <li class='carousel__item'>o + e = &#156;</li>
+            <li class='carousel__item'>^ + s = &#154;</li>
+          </ul>
+          <div>
+          <p>A Qwerty keyboard layout with accentuated letters as dead keys.<br>
+            Press AltGrp and the accent you want, then the letter you want to apply it to.</p>
+          <button>Download Binaries</button>
+          <button>Check Source</button></div>
+        </div>
+
+      </div>
+
+  <script type="text/javascript">
+  Element.prototype.shuffleChildren = function() {
+    for (var i = this.children.length; i >= 0; i--) {
+      this.appendChild(this.children[Math.random() * i | 0]);
+    }
+  };
+  document.querySelector('ul').shuffleChildren();
+  </script>
+</body>
+</html>
