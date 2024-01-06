@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,20 +15,38 @@
         height: 100vh;
       }
 
+      form {
+        display: flex;
+        justify-content: space-between;
+      }
+
       button {
         margin:0 auto;
-        width:49%;
+        width:45%;
         height: 5em;
         border-radius:10px;
-        border:none
+        border:none;
+        background: #fff;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-family: "Work Sans", sans-serif;
+        font-weight: 400;
+
+      }
+
+      .sources {
+        text-indent: 30px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url("https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png");
       }
       
       p {     
+        margin: 50px;
         padding: 20px;  
         border-radius:10px;
         background: #ddd;
-
-}
+      }
 
       .wrapper {
         background: linear-gradient(60deg, #420285, #08BDBD);
@@ -232,8 +249,10 @@
           <div>
           <p>A Qwerty keyboard layout with accentuated letters as dead keys.<br>
             Press AltGrp and the accent you want, then the letter you want to apply it to.</p>
-          <button>Download Binaries</button>
-          <button>Check Source</button></div>
+          <form>
+            <button class="binaries" formaction="https://github.com/Regnareb/Better-Qwerty/releases/latest/download/Better-Qwerty.zip">Download Binaries</button>
+            <button class="sources" formaction="https://github.com/Regnareb/Better-Qwerty">Get Source</button></div>
+          </form>
         </div>
 
       </div>
