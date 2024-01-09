@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Better Qwerty - Keyboard layout for French, Spanish, Italian languages</title>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+body {
+  background: linear-gradient(60deg, #420285, #08BDBD);
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  height: 100vh;
+}
+
+.wrapper {
+  height: 100%;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.typewriter {
+  width: 100%;
+  height: 4rem;
+  margin: 0 auto;
+  padding: 3rem;
+  text-align: center;
+}
+
+#w1, #w2 {
+  width: 20rem;
+  text-align: left;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  position: absolute;
+  border-radius: 2px;
+  padding: 1.5rem;
+}
+
+#w1 {
+  color: #ababab;
+  background-color: #fff;
+  padding-right: 2.5rem;
+}
+#w2 {padding-left: 18.5rem;}
+#w2 .result {padding-left: 4.5rem;}
+
+p {     
+  margin: 0 0 3rem 0;
+  padding: 40px;  
+  border-radius:2px;
+  background: #fff;
+}
+
+form {display: flex;}
+
+button {
+  margin:0 auto;
+  width:45%;
+  height: 5em;
+  text-transform: uppercase;
+  font-family: "Work Sans", sans-serif;
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+button:focus {
+box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+button:hover {
+box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+transform: translateY(-2px);
+}
+
+button:active {
+box-shadow: #3c4fe0 0 3px 7px inset;
+transform: translateY(2px);
+}
+  
+.sources, .sources:hover, .sources:focus, .sources:hover, .sources:active {background: none; box-shadow: none;}
+</style>
+<script src="https://unpkg.com/typeit@8.8.0/dist/index.umd.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VSP7S1DL6X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VSP7S1DL6X');
+</script>
+<body>
+  <div class='wrapper'>
+    <div class="typewriter">
+      <div id="w1" >Press AltGrp and &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to type </div>
+      <div id="w2" ><span class="combo"></span></div>
+    </div>
+
+    <p>A Qwerty layout with accentuated letters as dead keys on Windows for French, Italian, Spanish languages.<br><br>
+        Press AltGrp and the accent you want, then the letter you want to apply it to.</p>
+    <form>
+      <button class="binaries" formaction="https://github.com/Regnareb/Better-Qwerty/releases/latest/download/Better-Qwerty.zip">Download</button>
+      <button class="sources" formaction="https://github.com/Regnareb/Better-Qwerty">Get Source</button>
+    </form>
+  </div>
+
+  <script type="text/javascript">
+
+const cars = [
+  "` + e <span class=\"result\">&egrave;</span> ", 
+  "' + e <span class=\"result\">&eacute;</span> ", 
+  "\` + a <span class=\"result\">&agrave;</span> ", 
+  "' + o <span class=\"result\">&oacute;</span> ", 
+  "^ + a <span class=\"result\">&acirc;</span> ", 
+  "~ + n <span class=\"result\">&ntilde;</span> ", 
+  ": + i <span class=\"result\">&nbsp;&iuml;</span> ", 
+  ", + c <span class=\"result\">&ccedil;</span> ", 
+  "\` + u <span class=\"result\">&ugrave;</span> ", 
+  "/ + o <span class=\"result\">&oslash;</span> ", 
+  "o + e <span class=\"result\">&oelig;</span> ", 
+  "^ + s <span class=\"result\">&scaron;</span> "];
+
+function shuffleArr (array){
+    for (var i = array.length - 1; i > 0; i--) {
+        var rand = Math.floor(Math.random() * (i + 1));
+        [array[i], array[rand]] = [array[rand], array[i]]
+    }
+}
+shuffleArr(cars);
+
+
+new TypeIt(".combo", {
+    strings: cars,
+    breakLines: false,
+    loop: true,
+    nextStringDelay: [3000, 250],
+    loopDelay: [250, 3000],
+    startDelay: 0,
+    lifeLike: false,
+}).go();
+</script>
+</body>
+</html>
